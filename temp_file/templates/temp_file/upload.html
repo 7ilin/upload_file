@@ -1,0 +1,8 @@
+{% load static %}
+<h1>Загрузить файл</h1>
+<form method="post" novalidate enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p  }}
+    <button type="submit" class="btn btn-success">Отправить</button>
+</form>
+
