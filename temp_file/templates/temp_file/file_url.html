@@ -1,0 +1,9 @@
+{% extends 'temp_file/base.html' %}
+{% block content %}
+
+<h3>Файл успешно загружен на сервер</h3>
+<a href="{{url}}">{{ url }}</a>
+
+<p><a href="/check/{{pk}}">Просмотр информации о врмени активности файла</a></p>
+
+{% endblock %}

@@ -1,8 +1,11 @@
-{% load static %}
-<h1>Загрузить файл</h1>
-<form method="post" novalidate enctype="multipart/form-data">
+{% extends 'temp_file/base.html' %}
+{% block content %}
+
+<h1>Загрузка файла</h1>
+<form method="post" class="post-form" novalidate enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p  }}
-    <button type="submit" class="btn btn-success">Отправить</button>
+    <button type="submit" class="btn btn-lg btn-secondary">Отправить</button>
 </form>
 
+{% endblock %}
