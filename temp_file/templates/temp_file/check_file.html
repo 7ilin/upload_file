@@ -1,7 +1,8 @@
 {% extends 'temp_file/base.html' %}
 {% block content %}
+<h3>Информация о файле: </h3>
+<p> Название: "{{ temp_file.name }}"<br> Описание: {{ temp_file.text }} <br> Активен до {{ temp_file.finish_date }}</p>
+<h4><a href="/file/{{pk}}">{{ temp_file.upload}}</a></h4>
 
-<h3>Файл "{{ temp_file.name }}" будет удален:</h3>
-<p>{{ temp_file.finish_date }}</p>
 
 {% endblock %}

@@ -31,5 +31,5 @@ def check_file(request, pk):
     temp_file = get_object_or_404(UploadFile, pk=pk)
     if temp_file.is_outdated():
         raise Http404('Файл удален по истечению срока действия.')
-    return render(request, 'temp_file/check_file.html', {'temp_file': temp_file})
+    return render(request, 'temp_file/check_file.html', {'temp_file': temp_file, 'pk': pk})
 
