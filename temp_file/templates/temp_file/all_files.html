@@ -1,0 +1,10 @@
+{% extends 'temp_file/base.html' %}
+
+{% block content %}
+<h4>Все активные файлы:</h4>
+    {% for all_file in all_file%}
+        {% if not all_file.is_outdated %}
+        <a href="{{ all_file.upload.url}}">{{ all_file.upload}}</p>
+        {% endif %}
+    {% endfor %}
+{% endblock %}

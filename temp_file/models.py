@@ -8,6 +8,7 @@ class UploadFile(models.Model):
     upload = models.FileField(upload_to='uploads/', verbose_name='Загрузочный файл')
     created_date = models.DateTimeField(default=timezone.now)
     finish_date = models.DateTimeField(null=False, verbose_name='Введите время действия файла')
+    author = models.ForeignKey('auth.User', on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return self.name

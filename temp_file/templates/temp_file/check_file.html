@@ -2,7 +2,7 @@
 {% block content %}
 <h3>Информация о файле: </h3>
 <p> Название: "{{ temp_file.name }}"<br> Описание: {{ temp_file.text }} <br> Активен до {{ temp_file.finish_date }}</p>
-<h4><a href="/file/{{pk}}">{{ temp_file.upload}}</a></h4>
+<h4><a href="{{ temp_file.upload.url}}">{{ temp_file.upload}}</a></h4>
 
 
 {% endblock %}
